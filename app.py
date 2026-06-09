@@ -4,6 +4,7 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from difflib import SequenceMatcher
 import re
 import time
+import os
 
 # =====================================================
 # PAGE CONFIG
@@ -15,6 +16,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 # =====================================================
 # CUSTOM CSS
