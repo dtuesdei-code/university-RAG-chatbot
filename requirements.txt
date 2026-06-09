@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-core
+langchain-community
+chromadb
+openai
+faiss-cpu
+tiktoken
+python-dotenv
+requests
+pyPDF2
