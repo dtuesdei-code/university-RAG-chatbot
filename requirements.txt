@@ -10,3 +10,5 @@ tiktoken
 python-dotenv
 requests
 pyPDF2
+protobuf==3.20.3
+
