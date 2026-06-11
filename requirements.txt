@@ -2,6 +2,7 @@ streamlit
 langchain
 langchain-core
 langchain-community
+langchain-openai
 chromadb
 openai
 faiss-cpu
