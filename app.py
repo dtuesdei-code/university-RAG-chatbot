@@ -350,7 +350,7 @@ def get_last_topic():
 
 @st.cache_resource
 def load_vector_store():
-    emb = OpenAIEmbeddings(model="text-embedding-3-small")
+    emb = OpenAIEmbeddings(model="text-embedding-3-small",api_key=openai_api_key)
     return Chroma(
         embedding_function=emb,
         persist_directory="./chroma_db",
@@ -824,7 +824,7 @@ def maybe_summarize_history():
     prefix = f"Previous summary: {existing}\n\n" if existing else ""
 
     try:
-        summary_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+        summary_llm = ChatOpenAI(model="gpt-4o-mini", api_key=openai_api_key, temperature=0)
         result = summary_llm.invoke(
             f"{prefix}Summarize this conversation in 2-3 sentences, "
             f"focusing on what topics, programs, or colleges were discussed:\n\n{turns_text}"
@@ -853,7 +853,7 @@ def determine_k(query, query_type):
 
 @st.cache_resource
 def load_llm():
-    return ChatOpenAI(model="gpt-4o-mini", temperature=0, streaming=True)
+    return ChatOpenAI(model="gpt-4o-mini",api_key=openai_api_key, temperature=0, streaming=True)
 
 llm = load_llm()
 
