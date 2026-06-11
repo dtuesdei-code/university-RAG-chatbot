@@ -6,6 +6,29 @@ __pycache__/
 # C extensions
 *.so
 
+
+# IDE
+.vscode/
+
+# Python env
+.python-version
+
+# Vector DB / local cache
+chroma_db/
+
+# notebooks
+notebook/
+
+# lock files (optional)
+uv.lock
+pyproject.toml
+
+# --- Deployment ---
+# Ignore ingestion and dev scripts
+ingest.py
+data_ingestion.py
+main.py
+
 # Distribution / packaging
 .Python
 build/
