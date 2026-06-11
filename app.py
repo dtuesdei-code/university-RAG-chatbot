@@ -1,10 +1,12 @@
 import streamlit as st
+import os
+os.environ["CHROMA_TELEMETRY_DISABLED"] = "1"
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from difflib import SequenceMatcher
 import re
 import time
-import os
+
 
 # =====================================================
 # PAGE CONFIG
