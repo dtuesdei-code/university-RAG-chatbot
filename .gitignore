@@ -13,8 +13,6 @@ __pycache__/
 # Python env
 .python-version
 
-# Vector DB / local cache
-chroma_db/
 
 # notebooks
 notebook/
